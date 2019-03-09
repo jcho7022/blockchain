@@ -1,7 +1,7 @@
 # Blockchain Record Store
 
 ## Introduction
-A distributed ledger built using Go and Docker where record submissions are validated using a blockchain.
+Distributed ledger built using Go and Docker where record submissions are validated using a blockchain.
 
 
 ## Running the blockchain
