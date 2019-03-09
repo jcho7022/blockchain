@@ -1,0 +1,71 @@
+version: '3.4'
+services:
+  blockchain-service1:
+    build:
+      context: ./blockchain-service
+      dockerfile: Dockerfile1
+    network_mode: "host" 
+    ports:
+      - "5050:5050"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./logs:/root/miner/logs
+    environment:
+      - GOPATH=/root/go
+      - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/go/bin:/root/go/bin:/root/go/bin
+
+  blockchain-service2:
+    build:
+      context: ./blockchain-service
+      dockerfile: Dockerfile2
+    network_mode: "host"
+    ports:
+      - "6060:6060"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./logs:/root/miner/logs
+    environment:
+      - GOPATH=/root/go
+      - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/go/bin:/root/go/bin:/root/go/bin
+
+  blockchain-service3:
+    build:
+      context: ./blockchain-service
+      dockerfile: Dockerfile3
+    network_mode: "host"
+    ports:
+      - "7070:7070"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./logs:/root/miner/logs
+    environment:
+      - GOPATH=/root/go
+      - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/go/bin:/root/go/bin:/root/go/bin
+
+  blockchain-service4:
+    build:
+      context: ./blockchain-service
+      dockerfile: Dockerfile4
+    network_mode: "host"
+    ports:
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./logs:/root/miner/logs
+    environment:
+      - GOPATH=/root/go
+      - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/go/bin:/root/go/bin:/root/go/bin
+
+  blockchain-service5:
+    build:
+      context: ./blockchain-service
+      dockerfile: Dockerfile5
+    network_mode: "host"
+    ports:
+      - "9090:9090"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./logs:/root/miner/logs
+    environment:
+      - GOPATH=/root/go
+      - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/go/bin:/root/go/bin:/root/go/bin
